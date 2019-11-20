@@ -1,1 +1,31 @@
-<p>sing-in works!</p>
+<form class="text-center border border-light p-5" action="#!">
+    <p class="h4 mb-4">Zapateria - Sistema Punto de Venta</p>
+    <p class="h4 mb-4">Iniciar Sesion</p>
+    <!-- Nombre de Usuario -->
+    <input type="text" id="txtUsuario" class="form-control mb-4" placeholder="Usuario">
+    <!-- Contrasena -->
+    <input type="password" id="txtContrasena" class="form-control mb-4" placeholder="Contrasena">
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Recordar Usuario -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="chkEsRecordado">
+                <label class="custom-control-label" for="chkEsRecordado">Recordar Usuario</label>
+            </div>
+        </div>
+        <div>
+            <!-- Contrasena Olvidada -->
+            <a routerLink="/registrar">¿Contraseña Olvidada?</a>
+        </div>
+    </div>
+    <!-- Ingresar al sistema -->
+    <button class="btn btn-info btn-block my-4" type="submit">Entrar</button>
+    <!-- Registrar Usuario -->
+    <p>¿No tienes una cuenta?
+        <a href="">Registrar</a>
+    </p>
+    <!-- Login por Red Social -->
+    <p>O ingresa por:</p>
+    <a href="#" class="mx-2" role="button"><i class="fab fa-google light-blue-text"></i></a>
+</form>
+<router-outlet></router-outlet>
