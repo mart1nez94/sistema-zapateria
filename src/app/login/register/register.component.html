@@ -1,1 +1,29 @@
-<p>register works!</p>
+<form class="text-center border border-light p-5" action="#!">
+
+    <p class="h4 mb-4">Registrarse</p>
+
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- Nombre -->
+            <input type="text" id="txtNombre" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col">
+            <!-- Apellido -->
+            <input type="text" id="txtApellido" class="form-control" placeholder="Apellido">
+        </div>
+    </div>
+
+    <!-- Nombre de Usuario -->
+    <input type="text" id="txtUsuario" class="form-control mb-4" placeholder="Usuario">
+
+    <!-- Contrasena -->
+    <input type="password" id="txtContrasena" class="form-control" placeholder="Contraseña"
+        aria-describedby="infoContrasena">
+    <small id="infoContrasena" class="form-text text-muted mb-4">
+        Al menos 8 caracteres y un digito especial
+    </small>
+
+    <!-- Registrarse -->
+    <button class="btn btn-info my-4 btn-block" type="submit">Registrarse</button>
+
+</form>
