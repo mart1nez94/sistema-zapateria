@@ -1,0 +1,49 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm wow fadeInUp">
+      <div class="card">
+        <div class="card-header">
+          Nuevo Permiso
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Añade un permiso nuevo al sistema</h5>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-sticky-note"></i></span>
+              <span class="input-group-text">Permiso</span>
+            </div>
+            <input #nuevoPermiso type="text" class="form-control" aria-label="Nombre del Permiso"
+              placeholder="Nombre del Permiso">
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="crearPermiso(nuevoPermiso.value)"><i
+              class="fas fa-check"></i> Añadir permiso al sistema</button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">No se permiten nombres de permisos repetidos</small>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm wow fadeInUp">
+      <div class="card">
+        <div class="card-header">
+          Nuevo Permiso
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Permisos añadidos al sistema</h5>
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action" *ngFor="let permiso of permisos">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">#{{ permiso.id }} - {{ permiso.nombre }}</h5>
+                <small class="text-muted">Añadido por: {{ permiso.administrador }}</small>
+              </div>
+              <small class="text-muted">Fecha de Ingreso: {{ permiso.fecha_ingreso | date }}</small>
+            </a>
+          </div>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Cambios realizados por el administrador en sesion</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

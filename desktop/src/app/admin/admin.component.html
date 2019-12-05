@@ -1,0 +1,36 @@
+<div class="pos-f-t">
+  <div class="collapse container-fluid wow fadeIn" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4 row">
+      <div class="col-sm" *ngIf="isAdministrador">
+        <h5 class="text-white h4">Menu</h5>
+        <div>
+          <button type="button" class="btn btn-secondary btn-lg btn-block"
+            (click)="ingresarPermisos()">Permisos</button>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="ingresarGrupos()">Grupos</button>
+          <button type="button" class="btn btn-secondary btn-lg btn-block"
+            (click)="ingresarUsuarios()">Usuarios</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <h5 class="text-white h4">Informacion</h5>
+        <div class="alert alert-dark" role="alert">
+          <span><b>Usuario: </b></span><span>{{ usuario }}</span>
+          <br>
+          <span><b>Tipo de Usuario: </b></span><span>{{ tipoUsuario }}</span>
+          <br>
+          <span><b>Grupo: </b></span><span>{{ grupo }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler" type="button" (click)="salir()">
+      <i class="fas fa-sign-out-alt"></i> Salir
+    </button>
+  </nav>
+</div>
+<router-outlet></router-outlet>

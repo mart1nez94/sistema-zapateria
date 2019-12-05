@@ -1,0 +1,262 @@
+<!-- Login -->
+<!-- <form class="form-signin">
+  <div class="text-center mb-4">
+    <img class="mb-4"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCA2NCA2NCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBmaWxsPSIjZjllM2FlIiBkPSJNMTMsMjB2NWg2VjE5QTEyLDEyLDAsMCwxLDMxLDdoMkExMiwxMiwwLDAsMSw0NSwxOXY2aDZWMjBBMTksMTksMCwwLDAsMzIsMWgwQTE5LDE5LDAsMCwwLDEzLDIwWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmOWUzYWUiIGQ9Ik0xMywyMHY1aDZWMTlBMTIsMTIsMCwwLDEsMzEsN2gyQTEyLDEyLDAsMCwxLDQ1LDE5djZoNlYyMEExOSwxOSwwLDAsMCwzMiwxaDBBMTksMTksMCwwLDAsMTMsMjBaIj48L3BhdGg+PHBhdGggZmlsbD0iI2Y1Yzg3MiIgZD0iTTI5IDFIMzVWN0gyOXoiPjwvcGF0aD48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iMzQiIHg9IjciIHk9IjI1IiBmaWxsPSIjYzJjZGU3IiByeD0iMyIgcnk9IjMiPjwvcmVjdD48cGF0aCBmaWxsPSIjYWNiN2QwIiBkPSJNMTEsNDBINTNhNCw0LDAsMCwxLDQsNFY1NmEzLDMsMCwwLDEtMywzSDEwYTMsMywwLDAsMS0zLTNWNDRBNCw0LDAsMCwxLDExLDQwWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmNWM4NzIiIGQ9Ik0zMiAzMUE5IDkgMCAxIDAgMzIgNDlBOSA5IDAgMSAwIDMyIDMxWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmZmViOWIiIGQ9Ik0zMiAzNUE1IDUgMCAxIDAgMzIgNDVBNSA1IDAgMSAwIDMyIDM1WiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM4ZDZjOWYiIGQ9Ik01NSwyNEg1MlYxOUExOSwxOSwwLDAsMCwzMywwSDMxQTE5LDE5LDAsMCwwLDEyLDE5djVIOWEzLDMsMCwwLDAtMywzVjU3YTMsMywwLDAsMCwzLDNINTVhMywzLDAsMCwwLDMtM1YyN0EzLDMsMCwwLDAsNTUsMjRabS01LTV2NUg0NlYxOUExMywxMywwLDAsMCwzNiw2LjM2VjIuMjhBMTcsMTcsMCwwLDEsNTAsMTlaTTMxLDhoMkExMSwxMSwwLDAsMSw0NCwxOXY1SDIwVjE5QTExLDExLDAsMCwxLDMxLDhabTItNmMuMzQsMCwuNjcsMCwxLC4wNXY0QzMzLjY3LDYsMzMuMzQsNiwzMyw2SDMxYy0uMzQsMC0uNjcsMC0xLC4wNXYtNGMuMzMsMCwuNjYtLjA1LDEtLjA1Wk0xNCwxOUExNywxNywwLDAsMSwyOCwyLjI4VjYuMzZBMTMsMTMsMCwwLDAsMTgsMTl2NUgxNFpNNTYsNTdhMSwxLDAsMCwxLTEsMUg5YTEsMSwwLDAsMS0xLTFWMjdhMSwxLDAsMCwxLDEtMUg1NWExLDEsMCwwLDEsMSwxWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM4ZDZjOWYiIGQ9Ik0zMiw1MEExMCwxMCwwLDEsMCwyMiw0MCwxMCwxMCwwLDAsMCwzMiw1MFptMC0xOGE4LDgsMCwxLDEtOCw4QTgsOCwwLDAsMSwzMiwzMloiPjwvcGF0aD48cGF0aCBmaWxsPSIjOGQ2YzlmIiBkPSJNMzIgMzYuODNhMSAxIDAgMCAwIDEtMVYzNGExIDEgMCAwIDAtMiAwdjEuODNBMSAxIDAgMCAwIDMyIDM2Ljgzek0zMiA0Ni44M2ExIDEgMCAwIDAgMS0xVjQ0YTEgMSAwIDAgMC0yIDB2MS44M0ExIDEgMCAwIDAgMzIgNDYuODN6TTI4LjgzIDQwYTEgMSAwIDAgMC0xLTFIMjZhMSAxIDAgMCAwIDAgMmgxLjgzQTEgMSAwIDAgMCAyOC44MyA0MHpNMzUuMTcgNDBhMSAxIDAgMCAwIDEgMUgzOGExIDEgMCAwIDAgMC0ySDM2LjE3QTEgMSAwIDAgMCAzNS4xNyA0MHpNMjguNDEgMzcuNzRhMSAxIDAgMCAwIDEuNDEtMS40MUwyOC41MiAzNWExIDEgMCAwIDAtMS40MSAxLjQxek0zNS40OCA0NC44MWExIDEgMCAwIDAgMS40MS0xLjQxbC0xLjMtMS4zYTEgMSAwIDAgMC0xLjQxIDEuNDF6TTI4LjQxIDQyLjIxbC0xLjMgMS4zYTEgMSAwIDEgMCAxLjQxIDEuNDFsMS4zLTEuM2ExIDEgMCAwIDAtMS40MS0xLjQxek0zNSAzOGExIDEgMCAwIDAgLjcxLS4yOWwxLjMtMS4zQTEgMSAwIDAgMCAzNS41OSAzNWwtMS4zIDEuM0ExIDEgMCAwIDAgMzUgMzh6TTUzIDU0SDQ5YTEgMSAwIDAgMCAwIDJoNGExIDEgMCAwIDAgMC0yek00NSA1NEgxMWExIDEgMCAwIDAgMCAySDQ1YTEgMSAwIDAgMCAwLTJ6Ij48L3BhdGg+PC9zdmc+"
+      alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Floating labels</h1>
+    <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a
+        href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+  </div>
+
+  <div class="form-label-group">
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputEmail">Email address</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <label for="inputPassword">Password</label>
+  </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2019</p>
+</form> -->
+<!-- Menu -->
+<!-- <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+<div>
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+</div> -->
+<!-- Permisos -->
+<!-- <div class="card-deck">
+  <div class="card">
+    <div class="card-header">
+      Nuevo Permiso
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Añade un permiso nuevo al sistema</h5>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      Permisos
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Permisos añadidos al sistema</h5>
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+          </p>
+          <small>Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+          </p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">List group item heading</h5>
+            <small class="text-muted">3 days ago</small>
+          </div>
+          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+          </p>
+          <small class="text-muted">Donec id elit non mi porta.</small>
+        </a>
+      </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div> -->
+<!-- Grupos -->
+<!-- <div class="card-deck">
+  <div class="card">
+    <div class="card-header">
+      Nuevo
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Añade un grupo nuevo al sistema</h5>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="basic-addon1">
+      </div>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      Grupos
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Grupos disponibles en el sistema</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Default radio
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          Second default radio
+        </label>
+      </div>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    Permisos del Grupo
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Permisos incluidos en el grupo</h5>
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+        </p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div> -->
+<!-- Usuarios -->
+<!-- <div class="card text-center">
+  <div class="card-header">
+    Usuarios
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Agregar usuarios al sistema</h5>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">@</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">@</span>
+      </div>
+      <input type="password" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+      </div>
+      <select class="custom-select" id="inputGroupSelect01">
+        <option selected>Choose...</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary">Primary</button>
+    </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div> -->
+<!-- Menu Usuarios -->
+<!-- <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+<div>
+  <button type="button" class="btn btn-primary btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+  <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+</div> -->
+<router-outlet></router-outlet>

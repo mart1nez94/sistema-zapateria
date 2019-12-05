@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm wow fadeInUp" *ngIf="isAdministrador">
+      <div class="card text-center">
+        <div class="card-header">
+          Funciones
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Menu del Administrador</h5>
+          <p class="card-text">Funciones soportadas en el sistema.</p>
+          <div class="container">
+            <div *ngIf="isAdministrador">
+              <button type="button" class="btn btn-secondary btn-lg btn-block"
+                (click)="ingresarPermisos()">Permisos</button>
+              <button type="button" class="btn btn-secondary btn-lg btn-block"
+                (click)="ingresarGrupos()">Grupos</button>
+              <button type="button" class="btn btn-secondary btn-lg btn-block"
+                (click)="ingresarUsuarios()">Usuarios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm wow fadeInUp" *ngIf="isUsuario">
+      <div class="card text-center">
+        <div class="card-header">
+          Funciones
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Menu del Usuario</h5>
+          <p class="card-text">Funciones soportadas en el sistema.</p>
+          <div class="container">
+            <div *ngFor="let asignado of asignados">
+              <button type="button" class="btn btn-secondary btn-lg btn-block"
+                (click)="obtenerFuncion(asignado.permiso)">{{ asignado.permiso }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm wow fadeInUp" *ngIf="funcion">
+      <div class="card text-center">
+        <div class="card-header">
+          Abriendo Funcion
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Levantando el servicio</h5>
+          <p class="card-text"><span>Cargando la funcion <b>{{ funcion }}</b>...</span></p>
+          <div class="container">
+            <div class="progress">
+              <div *ngIf="cargar == 10" class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 10%">10%
+              </div>
+              <div *ngIf="cargar == 40" class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%">40%
+              </div>
+              <div *ngIf="cargar == 80" class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%
+              </div>
+              <div *ngIf="cargar == 100" class="progress-bar progress-bar-striped bg-success progress-bar-animated"
+                role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%
+              </div>
+            </div>
+          </div>
+          <div class="container" *ngIf="cargar == 100">
+            <br>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="terminarFuncion()">Finalizar
+              funcion {{ funcion }}</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

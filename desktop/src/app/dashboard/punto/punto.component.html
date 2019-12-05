@@ -1,0 +1,62 @@
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 wow fadeInUp">
+      <div class="card text-center">
+        <div class="card-header">
+          Producto
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Añadir Producto</h5>
+          <p class="card-text">Codigo de Barras</p>
+          <input #codigo type="number" class="form-control text-center" id="codigoBarras" aria-describedby="emailHelp"
+            placeholder="0000000">
+          <br>
+          <button type="button" class="btn btn-secondary btn-lg" (click)="buscar(codigo.value)">Añadir</button>
+        </div>
+      </div>
+      <br>
+      <div class="card text-center">
+        <div class="card-header">
+          Pricing
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Total: {{ precio | currency }}</h5>
+          <p class="card-text">Productos Totales: {{ productos }} </p>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="col-sm-8 wow fadeInUp">
+      <div class="card text-center">
+        <div class="card-header">
+          Orden de Compra # 
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Lista de Compras</h5>
+          <br>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Talla</th>
+                <th scope="col">Precio</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let c of carrito">
+                <th scope="row">{{ c.codigo }}</th>
+                <td>{{ c.nombre }}</td>
+                <td>{{ c.talla }}</td>
+                <td>{{ c.precio | currency }}</td>
+                <td><button type="button" class="btn btn-secondary btn-sm"><b>X</b></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

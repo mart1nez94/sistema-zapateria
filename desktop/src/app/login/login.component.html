@@ -1,0 +1,27 @@
+<br><br>
+<form class="form-signin wow fadeInDown" [formGroup]="loginForm" (ngSubmit)="ingresar()">
+  <div class="text-center mb-4">
+    <img class="mb-4"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCA2NCA2NCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBmaWxsPSIjZjllM2FlIiBkPSJNMTMsMjB2NWg2VjE5QTEyLDEyLDAsMCwxLDMxLDdoMkExMiwxMiwwLDAsMSw0NSwxOXY2aDZWMjBBMTksMTksMCwwLDAsMzIsMWgwQTE5LDE5LDAsMCwwLDEzLDIwWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmOWUzYWUiIGQ9Ik0xMywyMHY1aDZWMTlBMTIsMTIsMCwwLDEsMzEsN2gyQTEyLDEyLDAsMCwxLDQ1LDE5djZoNlYyMEExOSwxOSwwLDAsMCwzMiwxaDBBMTksMTksMCwwLDAsMTMsMjBaIj48L3BhdGg+PHBhdGggZmlsbD0iI2Y1Yzg3MiIgZD0iTTI5IDFIMzVWN0gyOXoiPjwvcGF0aD48cmVjdCB3aWR0aD0iNTAiIGhlaWdodD0iMzQiIHg9IjciIHk9IjI1IiBmaWxsPSIjYzJjZGU3IiByeD0iMyIgcnk9IjMiPjwvcmVjdD48cGF0aCBmaWxsPSIjYWNiN2QwIiBkPSJNMTEsNDBINTNhNCw0LDAsMCwxLDQsNFY1NmEzLDMsMCwwLDEtMywzSDEwYTMsMywwLDAsMS0zLTNWNDRBNCw0LDAsMCwxLDExLDQwWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmNWM4NzIiIGQ9Ik0zMiAzMUE5IDkgMCAxIDAgMzIgNDlBOSA5IDAgMSAwIDMyIDMxWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmZmViOWIiIGQ9Ik0zMiAzNUE1IDUgMCAxIDAgMzIgNDVBNSA1IDAgMSAwIDMyIDM1WiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM4ZDZjOWYiIGQ9Ik01NSwyNEg1MlYxOUExOSwxOSwwLDAsMCwzMywwSDMxQTE5LDE5LDAsMCwwLDEyLDE5djVIOWEzLDMsMCwwLDAtMywzVjU3YTMsMywwLDAsMCwzLDNINTVhMywzLDAsMCwwLDMtM1YyN0EzLDMsMCwwLDAsNTUsMjRabS01LTV2NUg0NlYxOUExMywxMywwLDAsMCwzNiw2LjM2VjIuMjhBMTcsMTcsMCwwLDEsNTAsMTlaTTMxLDhoMkExMSwxMSwwLDAsMSw0NCwxOXY1SDIwVjE5QTExLDExLDAsMCwxLDMxLDhabTItNmMuMzQsMCwuNjcsMCwxLC4wNXY0QzMzLjY3LDYsMzMuMzQsNiwzMyw2SDMxYy0uMzQsMC0uNjcsMC0xLC4wNXYtNGMuMzMsMCwuNjYtLjA1LDEtLjA1Wk0xNCwxOUExNywxNywwLDAsMSwyOCwyLjI4VjYuMzZBMTMsMTMsMCwwLDAsMTgsMTl2NUgxNFpNNTYsNTdhMSwxLDAsMCwxLTEsMUg5YTEsMSwwLDAsMS0xLTFWMjdhMSwxLDAsMCwxLDEtMUg1NWExLDEsMCwwLDEsMSwxWiI+PC9wYXRoPjxwYXRoIGZpbGw9IiM4ZDZjOWYiIGQ9Ik0zMiw1MEExMCwxMCwwLDEsMCwyMiw0MCwxMCwxMCwwLDAsMCwzMiw1MFptMC0xOGE4LDgsMCwxLDEtOCw4QTgsOCwwLDAsMSwzMiwzMloiPjwvcGF0aD48cGF0aCBmaWxsPSIjOGQ2YzlmIiBkPSJNMzIgMzYuODNhMSAxIDAgMCAwIDEtMVYzNGExIDEgMCAwIDAtMiAwdjEuODNBMSAxIDAgMCAwIDMyIDM2Ljgzek0zMiA0Ni44M2ExIDEgMCAwIDAgMS0xVjQ0YTEgMSAwIDAgMC0yIDB2MS44M0ExIDEgMCAwIDAgMzIgNDYuODN6TTI4LjgzIDQwYTEgMSAwIDAgMC0xLTFIMjZhMSAxIDAgMCAwIDAgMmgxLjgzQTEgMSAwIDAgMCAyOC44MyA0MHpNMzUuMTcgNDBhMSAxIDAgMCAwIDEgMUgzOGExIDEgMCAwIDAgMC0ySDM2LjE3QTEgMSAwIDAgMCAzNS4xNyA0MHpNMjguNDEgMzcuNzRhMSAxIDAgMCAwIDEuNDEtMS40MUwyOC41MiAzNWExIDEgMCAwIDAtMS40MSAxLjQxek0zNS40OCA0NC44MWExIDEgMCAwIDAgMS40MS0xLjQxbC0xLjMtMS4zYTEgMSAwIDAgMC0xLjQxIDEuNDF6TTI4LjQxIDQyLjIxbC0xLjMgMS4zYTEgMSAwIDEgMCAxLjQxIDEuNDFsMS4zLTEuM2ExIDEgMCAwIDAtMS40MS0xLjQxek0zNSAzOGExIDEgMCAwIDAgLjcxLS4yOWwxLjMtMS4zQTEgMSAwIDAgMCAzNS41OSAzNWwtMS4zIDEuM0ExIDEgMCAwIDAgMzUgMzh6TTUzIDU0SDQ5YTEgMSAwIDAgMCAwIDJoNGExIDEgMCAwIDAgMC0yek00NSA1NEgxMWExIDEgMCAwIDAgMCAySDQ1YTEgMSAwIDAgMCAwLTJ6Ij48L3BhdGg+PC9zdmc+"
+      alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Punto de Venta para Zapateria</h1>
+    <p>Ingrese su <b>Usuario</b> y <b>Contraseña</b> para entrar al sistema.</p>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fas fa-user"></i></span>
+      <span class="input-group-text">Usuario</span>
+    </div>
+    <input type="text" class="form-control" formControlName="usuario" placeholder="usuario">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fas fa-key"></i></span>
+      <span class="input-group-text">Contraseña</span>
+    </div>
+    <input type="password" class="form-control" formControlName="contrasena" placeholder="contraseña">
+  </div>
+  <div class="form-signin">
+    <button class="btn btn-lg btn-secondary btn-block"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+  </div>
+</form>

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm wow fadeInUp">
+        <div class="card">
+          <div class="card-header">
+            Nuevo Producto
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Añade un nuevo producto al sistema</h5>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Codigo</span>
+                </div>
+                <input #codigo type="number" class="form-control" aria-label="Codigo de Barras"
+                  placeholder="Codigo de Barras">
+              </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Producto</span>
+              </div>
+              <input #nombre type="text" class="form-control" aria-label="Nombre del Producto"
+                placeholder="Nombre del Producto">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Marca</span>
+                </div>
+                <input #marca type="text" class="form-control" aria-label="Marca"
+                  placeholder="Marca">
+              </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Talla</span>
+                </div>
+                <input #talla type="number" class="form-control" aria-label="Talla"
+                  placeholder="Talla">
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">Precio</span>
+                  </div>
+                  <input #precio type="number" class="form-control" aria-label="Precio"
+                    placeholder="Precio">
+                </div>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="insertarProductos(codigo.value, nombre.value, marca.value, talla.value, precio.value)"><i class="fas fa-check"></i> Añadir producto
+              al sistema</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

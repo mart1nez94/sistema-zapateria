@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm wow fadeInUp">
+      <div class="card">
+        <div class="card-header">
+          Nuevo Usuario
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Añade un usuario nuevo al sistema</h5>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-signature"></i></span>
+              <span class="input-group-text">Nombre</span>
+            </div>
+            <input #nombreUsuario type="text" class="form-control" aria-label="Nombre del Usuario"
+              placeholder="Nombre del Permiso">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+              <span class="input-group-text">Contraseña</span>
+            </div>
+            <input #contrasena type="password" class="form-control" aria-label="Contraseña" placeholder="Contraseña">
+          </div>
+          <p>
+            <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample"
+              aria-expanded="false" aria-controls="collapseExample">
+              Asignar Grupo
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <div *ngFor="let grupo of grupos">
+                <br>
+                <button class="btn btn-secondary btn-lg btn-block" (click)="guardarGrupo(grupo.id, grupo.nombre)">{{ grupo.nombre }}</button>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="input-group mb-3">
+            <span>Grupo seleccionado: <b>{{ grupoNombre }}</b></span>
+          </div>
+          <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="insertarUsuarios(nombreUsuario.value, contrasena.value)"><i class="fas fa-check"></i> Añadir usuario
+            al sistema</button>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">No se permiten nombres de permisos repetidos</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
